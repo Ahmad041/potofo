@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Saya - Muhammad Ferdy Alamsyah</title>
+
+  <!-- Bootstrap 5 CSS dari CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons untuk ikon yang ramah pemula -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- CSS Tambahan (Sederhana & Mudah Dipahami) -->
+  <style>
+    /* Mengatur font dasar seluruh halaman */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #333333;
+    }
+
+    /* Membuat perpindahan halaman halus saat link navbar diklik */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Pengaturan jarak antar bagian (section) */
+    section {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    /* Gaya untuk lingkaran foto / inisial profil */
+    .avatar-circle {
+      width: 170px;
+      height: 170px;
+      background-color: #0d6efd;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border: 5px solid #ffffff;
+      margin: 0 auto;
+    }
+
+    /* Efek hover lembut pada kartu (card) */
+    .card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid #e9ecef;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Header tabel agar kontras dan mudah dibaca */
+    .table thead th {
+      background-color: #0d6efd;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================= -->
+  <!-- 1. NAVBAR / NAVIGASI UTAMA                                 -->
+  <!-- ========================================================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+    <div class="container">
+      <!-- Logo atau Nama Pemilik Web -->
+      <a class="navbar-brand fw-bold" href="#beranda">
+        <i class="bi bi-code-slash me-2"></i>Ferdy Portofolio
+      </a>
+
+      <!-- Tombol Hamburger untuk Tampilan HP (Mobile) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu Tautan Navigasi -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#beranda">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tentang">Tentang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pendidikan">Pendidikan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pengalaman">Pengalaman</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#keahlian">Keahlian</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#proyek">Proyek</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kontak">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================= -->
+  <!-- 2. HERO / BAGIAN BERANDA                                   -->
+  <!-- ========================================================= -->
+  <header class="bg-white border-bottom py-5" id="beranda">
+    <div class="container py-4">
+      <div class="row align-items-center g-4">
+        <!-- Kolom Teks Sambutan (Kiri) -->
+        <div class="col-lg-8 text-center text-lg-start">
+          <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill mb-3">
+            <i class="bi bi-stars me-1"></i> Web Portofolio Pemula
+          </span>
+          <h1 class="display-5 fw-bold text-dark mb-2">
+            Halo, Saya <span class="text-primary">Muhammad Ferdy Alamsyah</span>
+          </h1>
+          <p class="fs-5 text-muted mb-3">
+            Mahasiswa D3 Manajemen Informatika di <strong>Politeknik Astra</strong>
+          </p>
+          <p class="lead text-secondary mb-4">
+            Selamat datang di website portofolio pertama saya! Saya adalah seorang pemula yang baru terjun ke dunia web development, sedang bersemangat mempelajari HTML, CSS, Bootstrap, dan JavaScript.
+          </p>
+          <!-- Tombol Aksi Sederhana -->
+          <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
+            <a href="#proyek" class="btn btn-primary btn-lg px-4">
+              <i class="bi bi-folder-check me-1"></i> Lihat Proyek Saya
+            </a>
+            <a href="#kontak" class="btn btn-outline-secondary btn-lg px-4">
+              <i class="bi bi-chat-dots me-1"></i> Hubungi Saya
+            </a>
+          </div>
+        </div>
+
+        <!-- Kolom Foto / Inisial Profil (Kanan) -->
+        <div class="col-lg-4 text-center">
+          <div class="avatar-circle">
+            MFA
+          </div>
+          <div class="mt-3">
+            <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-1 rounded-pill">
+              <i class="bi bi-check-circle-fill me-1"></i> Sedang Belajar Web Dev
+            </span>
+            <p class="small text-muted mt-2 mb-0">NIM: 0320250042</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- 3. TENTANG SAYA                                            -->
+  <!-- ========================================================= -->
+  <section class="bg-light border-bottom" id="tentang">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary">Tentang Saya</h2>
+        <p class="text-muted">Perkenalan singkat mengenai diri dan latar belakang saya</p>
+        <div class="mx-auto bg-primary rounded" style="width: 60px; height: 3px;"></div>
+      </div>
+
+      <div class="row g-4 align-items-center">
+        <!-- Kolom Biodata Diri -->
+        <div class="col-md-7">
+          <h4 class="fw-bold mb-3">Saya senang belajar hal-hal baru di bidang teknologi</h4>
+          <p class="text-secondary text-justify">
+            Nama saya Muhammad Ferdy Alamsyah. Saat ini saya sedang menempuh pendidikan Diploma III jurusan Manajemen Informatika di Politeknik Astra. Saya memiliki ketertarikan tinggi terhadap pembuatan aplikasi web yang rapi, mudah dipakai, dan bermanfaat.
+          </p>
+          <p class="text-secondary text-justify">
+            Sebagai pemula yang baru mendalami pemrograman web, fokus saya sekarang adalah memahami fondasi dasar seperti membuat struktur halaman yang baik dengan HTML, menata desain dengan CSS & Bootstrap, serta menambahkan fungsi interaktif sederhana dengan JavaScript.
+          </p>
+          <p class="text-secondary mb-0">
+            Saya selalu bersemangat untuk mencoba latihan-latihan baru, berkolaborasi dalam tim, dan menerima kritik atau saran agar kemampuan coding saya terus meningkat.
+          </p>
+        </div>
+
+        <!-- Kolom Ringkasan Informasi Cepat -->
+        <div class="col-md-5">
+          <div class="card shadow-sm p-3 bg-white">
+            <div class="card-body">
+              <h5 class="card-title fw-bold text-dark border-bottom pb-2 mb-3">
+                <i class="bi bi-person-lines-fill text-primary me-2"></i>Biodata Singkat
+              </h5>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2"><strong>Nama:</strong> Muhammad Ferdy Alamsyah</li>
+                <li class="mb-2"><strong>Status:</strong> Mahasiswa Aktif</li>
+                <li class="mb-2"><strong>Kampus:</strong> Politeknik Astra</li>
+                <li class="mb-2"><strong>Jurusan:</strong> Manajemen Informatika</li>
+                <li class="mb-2"><strong>Domisili:</strong> Bekasi, Jawa Barat</li>
+                <li><strong>Minat:</strong> Web Development, UI/UX Dasar, Database</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 4. PENDIDIKAN                                              -->
+  <!-- ========================================================= -->
+  <section class="bg-white border-bottom" id="pendidikan">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary">Riwayat Pendidikan</h2>
+        <p class="text-muted">Jejak pendidikan formal yang pernah dan sedang saya tempuh</p>
+        <div class="mx-auto bg-primary rounded" style="width: 60px; height: 3px;"></div>
+      </div>
+
+      <!-- Tabel Pendidikan Menggunakan Komponen Tabel Bootstrap -->
+      <div class="card shadow-sm">
+        <div class="card-body p-0">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover mb-0 align-middle">
+              <thead>
+                <tr class="text-center">
+                  <th style="width: 80px;">No</th>
+                  <th>Institusi / Sekolah</th>
+                  <th>Jurusan / Program Studi</th>
+                  <th style="width: 180px;">Tahun</th>
+                  <th style="width: 160px;">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center fw-bold">1</td>
+                  <td class="fw-semibold">Politeknik Astra</td>
+                  <td>Diploma III (D3) - Manajemen Informatika</td>
+                  <td class="text-center">2023 — Sekarang</td>
+                  <td class="text-center">
+                    <span class="badge bg-primary px-3 py-2">Mahasiswa Aktif</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center fw-bold">2</td>
+                  <td class="fw-semibold">SMK Negeri 5 Bekasi</td>
+                  <td>Rekayasa Perangkat Lunak (RPL)</td>
+                  <td class="text-center">2020 — 2023</td>
+                  <td class="text-center">
+                    <span class="badge bg-success px-3 py-2">Lulus</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 5. PENGALAMAN                                              -->
+  <!-- ========================================================= -->
+  <section class="bg-light border-bottom" id="pengalaman">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary">Pengalaman & Kegiatan</h2>
+        <p class="text-muted">Aktivitas organisasi dan proyek kolaborasi yang pernah saya ikuti</p>
+        <div class="mx-auto bg-primary rounded" style="width: 60px; height: 3px;"></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Kartu Pengalaman 1 -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-info text-dark px-3 py-2">
+                  <i class="bi bi-people-fill me-1"></i> Organisasi
+                </span>
+                <span class="text-muted small fw-semibold">2024 — Sekarang</span>
+              </div>
+              <h5 class="card-title fw-bold">Anggota Departemen Pendidikan</h5>
+              <h6 class="card-subtitle text-primary mb-3">Himpunan Mahasiswa / Kampus</h6>
+              <p class="card-text text-secondary">
+                Berperan aktif dalam menyusun program kegiatan pelatihan dan sesi belajar bersama teman-teman mahasiswa untuk mata kuliah pemrograman dan teknologi informasi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kartu Pengalaman 2 -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-warning text-dark px-3 py-2">
+                  <i class="bi bi-laptop me-1"></i> Proyek Kuliah
+                </span>
+                <span class="text-muted small fw-semibold">2023 — 2024</span>
+              </div>
+              <h5 class="card-title fw-bold">Tim Pembuat Aplikasi SiPanen</h5>
+              <h6 class="card-subtitle text-primary mb-3">Proyek Akademik</h6>
+              <p class="card-text text-secondary">
+                Berkolaborasi dengan tim untuk merancang sistem aplikasi pencatatan dan penjualan produk panen pertanian, bertugas dalam membuat antarmuka (UI) sederhana dan pengujian alur data.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 6. KEAHLIAN / SKILL                                        -->
+  <!-- ========================================================= -->
+  <section class="bg-white border-bottom" id="keahlian">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary">Keahlian Saya</h2>
+        <p class="text-muted">Teknologi dan materi yang sedang saya pelajari serta terus saya kembangkan</p>
+        <div class="mx-auto bg-primary rounded" style="width: 60px; height: 3px;"></div>
+      </div>
+
+      <div class="row g-3">
+        <!-- Skill 1: HTML5 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm text-center p-3">
+            <div class="fs-1 text-danger mb-2"><i class="bi bi-filetype-html"></i></div>
+            <h6 class="fw-bold mb-1">HTML5</h6>
+            <p class="small text-muted mb-0">Kerangka dan struktur dasar halaman website</p>
+          </div>
+        </div>
+
+        <!-- Skill 2: CSS3 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm text-center p-3">
+            <div class="fs-1 text-primary mb-2"><i class="bi bi-filetype-css"></i></div>
+            <h6 class="fw-bold mb-1">CSS3</h6>
+            <p class="small text-muted mb-0">Mengatur warna, font, dan tata letak tampilan</p>
+          </div>
+        </div>
+
+        <!-- Skill 3: Bootstrap 5 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm text-center p-3">
+            <div class="fs-1 text-purple mb-2" style="color: #6f42c1;"><i class="bi bi-bootstrap"></i></div>
+            <h6 class="fw-bold mb-1">Bootstrap 5</h6>
+            <p class="small text-muted mb-0">Membuat tampilan responsif di HP dan komputer</p>
+          </div>
+        </div>
+
+        <!-- Skill 4: JavaScript -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm text-center p-3">
+            <div class="fs-1 text-warning mb-2"><i class="bi bi-filetype-js"></i></div>
+            <h6 class="fw-bold mb-1">JavaScript</h6>
+            <p class="small text-muted mb-0">Interaksi dasar tombol, formulir, dan DOM</p>
+          </div>
+        </div>
+
+        <!-- Skill 5: Bahasa C -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm text-center p-3">
+            <div class="fs-1 text-info mb-2"><i class="bi bi-cpu"></i></div>
+            <h6 class="fw-bold mb-1">Bahasa C</h6>
+            <p class="small text-muted mb-0">Algoritma, struktur data, dan logika dasar</p>
+          </div>
+        </div>
+
+        <!-- Skill 6: Java -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm text-center p-3">
+            <div class="fs-1 text-danger mb-2"><i class="bi bi-cup-hot"></i></div>
+            <h6 class="fw-bold mb-1">Java</h6>
+            <p class="small text-muted mb-0">Konsep pemrograman berorientasi objek (OOP)</p>
+          </div>
+        </div>
+
+        <!-- Skill 7: Git & GitHub -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm text-center p-3">
+            <div class="fs-1 text-dark mb-2"><i class="bi bi-git"></i></div>
+            <h6 class="fw-bold mb-1">Git & GitHub</h6>
+            <p class="small text-muted mb-0">Penyimpanan tugas dan pelacakan versi kode</p>
+          </div>
+        </div>
+
+        <!-- Skill 8: Kerja Tim -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm text-center p-3">
+            <div class="fs-1 text-success mb-2"><i class="bi bi-chat-heart"></i></div>
+            <h6 class="fw-bold mb-1">Kerja Tim</h6>
+            <p class="small text-muted mb-0">Komunikasi, pembagian tugas, dan diskusi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 7. PROYEK SAYA                                             -->
+  <!-- ========================================================= -->
+  <section class="bg-light border-bottom" id="proyek">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary">Proyek Saya</h2>
+        <p class="text-muted">Kumpulan tugas kuliah dan proyek latihan yang pernah saya kerjakan</p>
+        <div class="mx-auto bg-primary rounded" style="width: 60px; height: 3px;"></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Proyek 1: SIM-ASET -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header bg-primary text-white text-center py-4">
+              <i class="bi bi-box-seam display-4"></i>
+              <h5 class="mt-2 mb-0 fw-bold">SIM-ASET</h5>
+            </div>
+            <div class="card-body">
+              <div class="mb-2">
+                <span class="badge bg-secondary">HTML</span>
+                <span class="badge bg-primary">Bootstrap</span>
+                <span class="badge bg-warning text-dark">JavaScript</span>
+              </div>
+              <h5 class="card-title fw-bold">Sistem Peminjaman Aset</h5>
+              <p class="card-text text-secondary small">
+                Aplikasi web untuk mencatat inventaris barang, data mahasiswa peminjam, serta riwayat transaksi peminjaman aset kampus dengan tabel dan formulir interaktif.
+              </p>
+            </div>
+            <div class="card-footer bg-white border-0 pt-0">
+              <a href="#kontak" class="btn btn-outline-primary btn-sm w-100">
+                <i class="bi bi-info-circle me-1"></i> Tanya Tentang Proyek
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyek 2: SiPanen -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header bg-success text-white text-center py-4">
+              <i class="bi bi-tree display-4"></i>
+              <h5 class="mt-2 mb-0 fw-bold">SiPanen</h5>
+            </div>
+            <div class="card-body">
+              <div class="mb-2">
+                <span class="badge bg-danger">Java</span>
+                <span class="badge bg-info text-dark">Desktop GUI</span>
+              </div>
+              <h5 class="card-title fw-bold">Penjualan Hasil Panen</h5>
+              <p class="card-text text-secondary small">
+                Aplikasi desktop untuk membantu para petani mencatat stok dan mempermudah proses transaksi jual-beli hasil panen pertanian secara lebih teratur.
+              </p>
+            </div>
+            <div class="card-footer bg-white border-0 pt-0">
+              <a href="#kontak" class="btn btn-outline-success btn-sm w-100">
+                <i class="bi bi-info-circle me-1"></i> Tanya Tentang Proyek
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyek 3: SIMPLE -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header bg-dark text-white text-center py-4">
+              <i class="bi bi-journal-text display-4"></i>
+              <h5 class="mt-2 mb-0 fw-bold">SIMPLE</h5>
+            </div>
+            <div class="card-body">
+              <div class="mb-2">
+                <span class="badge bg-info text-dark">Bahasa C</span>
+                <span class="badge bg-secondary">Struktur Data</span>
+              </div>
+              <h5 class="card-title fw-bold">Pendaftaran Bimbel</h5>
+              <p class="card-text text-secondary small">
+                Program aplikasi berbasis bahasa C untuk mengelola pendaftaran peserta kursus/bimbel, menyimpan data pendaftar ke file, dan melakukan pencarian data.
+              </p>
+            </div>
+            <div class="card-footer bg-white border-0 pt-0">
+              <a href="#kontak" class="btn btn-outline-dark btn-sm w-100">
+                <i class="bi bi-info-circle me-1"></i> Tanya Tentang Proyek
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 8. KONTAK SAYA                                             -->
+  <!-- ========================================================= -->
+  <section class="bg-white" id="kontak">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-primary">Kontak Saya</h2>
+        <p class="text-muted">Silakan hubungi saya untuk pertanyaan, diskusi, atau kolaborasi tugas</p>
+        <div class="mx-auto bg-primary rounded" style="width: 60px; height: 3px;"></div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Info Kontak (Kiri) -->
+        <div class="col-md-5">
+          <div class="card shadow-sm h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title fw-bold mb-4">Informasi Kontak</h5>
+
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary text-white rounded p-3 me-3">
+                  <i class="bi bi-envelope-fill fs-5"></i>
+                </div>
+                <div>
+                  <div class="text-muted small">Email</div>
+                  <div class="fw-semibold">ferdy.alamsyah@gmail.com</div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-success text-white rounded p-3 me-3">
+                  <i class="bi bi-geo-alt-fill fs-5"></i>
+                </div>
+                <div>
+                  <div class="text-muted small">Lokasi</div>
+                  <div class="fw-semibold">Bekasi, Jawa Barat, Indonesia</div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-dark text-white rounded p-3 me-3">
+                  <i class="bi bi-github fs-5"></i>
+                </div>
+                <div>
+                  <div class="text-muted small">GitHub</div>
+                  <a href="https://github.com" target="_blank" class="fw-semibold text-decoration-none">github.com/ferdyalamsyah</a>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center">
+                <div class="bg-primary text-white rounded p-3 me-3">
+                  <i class="bi bi-building fs-5"></i>
+                </div>
+                <div>
+                  <div class="text-muted small">Kampus</div>
+                  <div class="fw-semibold">Politeknik Astra (Cikarang)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulir Pesan (Kanan) -->
+        <div class="col-md-7">
+          <div class="card shadow-sm p-3">
+            <div class="card-body">
+              <h5 class="card-title fw-bold mb-3">Kirim Pesan</h5>
+              
+              <!-- Formulir HTML sederhana yang ramah pemula -->
+              <form id="formKontak" onsubmit="kirimPesan(event)">
+                <div class="mb-3">
+                  <label for="nama" class="form-label fw-semibold">Nama Lengkap</label>
+                  <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label fw-semibold">Alamat Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="nama@email.com" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="subjek" class="form-label fw-semibold">Subjek Pesan</label>
+                  <input type="text" class="form-control" id="subjek" placeholder="Contoh: Diskusi Tugas Pemrograman Web" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="pesan" class="form-label fw-semibold">Isi Pesan</label>
+                  <textarea class="form-control" id="pesan" rows="4" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary px-4">
+                  <i class="bi bi-send me-1"></i> Kirim Pesan
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- 9. FOOTER / KAKI HALAMAN                                  -->
+  <!-- ========================================================= -->
+  <footer class="bg-dark text-white py-4 text-center">
+    <div class="container">
+      <p class="mb-1">
+        &copy; 2026 <strong>Muhammad Ferdy Alamsyah</strong> — Portofolio Pemula
+      </p>
+      <p class="text-secondary small mb-2">
+        Dibuat untuk Tugas Mata Kuliah Pemrograman Web (PRG4_M2_P6_042) Politeknik Astra
+      </p>
+      <a href="#beranda" class="text-white-50 text-decoration-none small">
+        <i class="bi bi-arrow-up-circle me-1"></i>Kembali ke atas
+      </a>
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- 10. JAVASCRIPT PEMULA                                     -->
+  <!-- ========================================================= -->
+  <!-- Bootstrap 5 JS Bundle dari CDN (Termasuk Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Skrip JavaScript Sederhana untuk Validasi & Pesan Kirim Form -->
+  <script>
+    // Fungsi sederhana saat formulir kontak dikirim
+    function kirimPesan(event) {
+      // Mencegah halaman refresh otomatis
+      event.preventDefault();
+
+      // Mengambil nilai nama dari input
+      var namaPengirim = document.getElementById('nama').value;
+
+      // Menampilkan pesan terima kasih sederhana
+      alert('Halo ' + namaPengirim + ', terima kasih! Pesan Anda sudah terkirim (simulasi form pemula).');
+
+      // Mengosongkan kembali isi formulir
+      document.getElementById('formKontak').reset();
+    }
+  </script>
+</body>
+</html>
